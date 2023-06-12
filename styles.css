@@ -88,9 +88,19 @@
 .parts {
   display: grid;
   justify-content: space-between;
-  grid-template-columns: repeat(3, 1fr);
+  /* Diseño no responsive de 3 columnas x 2 filas */
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: auto;
   gap: 1em;
+  width: 100%;
+}
+
+.parts img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  justify-self: center;
 }
 
 main {
@@ -181,12 +191,7 @@ img:hover {
   transition: 1000ms;
 }
 
-.parts img {
-  height: 300px;
-  width: 300px;
-  object-fit: cover;
-  justify-self: center;
-}
+
 
 @media screen { 
   
